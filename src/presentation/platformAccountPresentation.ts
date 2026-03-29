@@ -453,9 +453,9 @@ export function buildWindsurfAccountPresentation(
       {
         key: 'prompt',
         label: t('common.shared.columns.promptCredits', 'User Prompt credits'),
-        percentage: promptMetrics.usedPercent,
+        percentage: 100 - promptMetrics.usedPercent,
         quotaClass: getWindsurfQuotaClass(promptMetrics.usedPercent),
-        valueText: `${promptMetrics.usedPercent}%`,
+        valueText: `${100 - promptMetrics.usedPercent}%`,
         used: promptMetrics.used,
         total: promptMetrics.total,
         left: promptMetrics.left,
@@ -463,9 +463,9 @@ export function buildWindsurfAccountPresentation(
       {
         key: 'addon',
         label: t('common.shared.columns.addOnPromptCredits', 'Add-on prompt credits'),
-        percentage: addOnMetrics.usedPercent,
+        percentage: 100 - addOnMetrics.usedPercent,
         quotaClass: getWindsurfQuotaClass(addOnMetrics.usedPercent),
-        valueText: `${addOnMetrics.usedPercent}%`,
+        valueText: `${100 - addOnMetrics.usedPercent}%`,
         used: addOnMetrics.used,
         total: addOnMetrics.total,
         left: addOnMetrics.left,
